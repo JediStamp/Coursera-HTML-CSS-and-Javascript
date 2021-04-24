@@ -1,12 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="En">
 <head>
-	<title>Hello Coursera!</title>
+	<meta charset="utf-8">
+	<title>HTML Tags</title>
 </head>
 
 <body>
-	<h1>Hello Coursera!</h1>
+	<header id="top">Company Logo, tag line and 
+		<nav>nav goes here</nav>
+	</header>
 
-	<p>This is a paragraph</p>
+	<section>
+		<ul>
+			<li><a href="#headings">Headings</a></li>
+			<li><a href="#sections">Sections</a></li>
+			<li><a href="#aside">Aside</a></li>
+			<li><a href="#divs">Divs and Spans</a></li>
+			<li><a href="#paras">Paragraphs</a></li>
+			<li><a href="#lists">Lists</a></li>
+			<li><a href="#links">Links</a></li>
+		</ul>
+	</section>
+	
+	<h1 id="headings">The main heading!</h1>
+	<h2>Subheading 2</h2>
+	<h3>Subheading 3</h3>
+	<h4>Subheading 4</h4>
+	<h5>Subheading 5</h5>
+	<h6>Subheading 6</h6>
+
+	<h2 id="sections">Sections to follow</h2>
+	<section>
+		<h3>Section 1</h3>
+		<article>Article 1</article>
+		<article>Article 2</article>
+		<article>Article 3</article>
+	</section>
+	<section>
+		<h3>Section 2</h3>
+		<article>Article 4</article>
+		<article>Article 5</article>
+		<article>Article 6</article>
+		<div>Regular DIV element</div>
+	</section>
+
+	<h2 id="aside">Aside</h2>
+	<aside>ASIDE - info that relates to the main topic</aside>
+
+	<h2 id="divs">Divs and Spans</h2>
+	<div>*** DIV 1: Some content here ***</div>
+	<div>*** DIV 2: Following right after DIV 1 ***</div>
+	<span>*** SPAN 1: Following right after DIV 2 ***</span>
+	<span> *** SPAN 2: After SPAN 1 ***
+	</span>
+	<div>*** DIV 3: Following right after Span 1
+		<span>***  SPAN 3: Inside of DIV 3 ***</span>
+			Continue content of DIV 3 ***
+	</div>
+
+	<div>
+		<h2 id="paras">Paragraphs</h2>
+		<p>This is a paragraph</p>
+		<p>A second paragraph</p>
+		<p>Don't be afraid to be &lt; than a 100%&nbsp;success &amp; &gt; more:</p>
+
+		<h2 id="lists">Lists</h2>
+		<h3>Unordered List</h3>
+		A list:
+		<ul>
+		<li>Milk</li>
+		<li>Donuts</li>
+		<li>Cookies
+			<ul>
+				<li>Chocolate</li>
+				<li>Sugar</li>
+				<li>Peanut Butter</li>
+			</ul></li>
+		<li>Pepto Bismol</li>
+		</ul>
+
+		<h3>Ordered List</h3>
+		Oreo cooking eating procedure:
+		<ol>
+			<li>Open box.</li>
+			<li>Take out cookie.</li>
+			<li>Make a Double Oreo
+				<ol>
+					<li>Peel off top.</li>
+					<li>Place another cookie in middle.</li>
+					<li>Put back the top part.</li>
+				</ol></li>
+			<li>Enjoy!</li>
+		</ol>
+	</div>
+
+	<h2><a name="links">Links</a></h2>
+	<section>
+		<p>Link to a file in the <a href="same-directory.html" 
+			title="Link in the Same Directory">same directory</a>.
+		</p>
+		<p> Back to top: <a href="#top">Back to Top</a></p>
+	</section>
+
+	<footer>
+		Copyright &copy; in the footer
+	</footer>
 </body>
 </html>
