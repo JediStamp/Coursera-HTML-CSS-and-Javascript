@@ -1,3 +1,11 @@
+# Coursera HTML, CSS, and Javascript for Web Developers
+
+This repository has my code as I follow along in the lectures for the above-mentioned course. 
+
+### Current Status: Week 1
+
+---
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/JediStamp/coursera-test/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
