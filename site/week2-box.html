@@ -4,24 +4,9 @@
 	<meta charset="utf-8">
 	<title>Box Model</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="style week2 box.css">
 	<style>
-		body {
-			margin: 0;
-			padding: 0;
-		}
-		#box {
-			background-color: #80aaff;
-			padding: 10px 10px 10px 10px;
-			border: 2px solid black;
-			margin: 40px;
-			width: 300px;
-		}
-		#content {
-			background-color: #ddffcc;
-		}
-		h1 {
-			margin-bottom: 30px;
-		}
+		/* Moved to style week2 box.css */
 	</style>
 </head>
 <body>
@@ -29,8 +14,11 @@
 	<nav>
 	<ul>
 		<li><a href="index.html">Week 1</a></li>
-		<li><a href="week2.html">Week 2</a></li>
-		<li><a href="week2-box.html">Week 2 Box Model</a></li>
+		<li><a href="week2.html">Week 2</a>
+			<ul>
+			<li><a href="week2-box.html">Week 2 Box Model</a></li>
+			<li><a href="week2-float.html">Week 2 Floating</a></li>				
+			</ul></li>
 		<li><a href="week3.html">Week 3</a></li>
 		<li><a href="week4.html">Week 4</a></li>
 		<li><a href="week5.html">Week 5</a></li>
@@ -38,7 +26,7 @@
 	</nav>
 	</header>
 
-	<h1>Box Model Layout</h1>
+	<h1>Box Model & Layout</h1>
 
 	<div id="box">
 		<div id="content">
@@ -49,8 +37,26 @@
 			The border is 2 px wide.
 			<h2>Margins</h2>
 			<p>Margin is outside the container. It says how close other things can get to the container.</p>
+			<h2>Size</h2>
+			<p>Width was set to 300, but is really, 400 px + 2 * Padding (2 * 20) + 2 * border (2 *2px) + 2 * margin (2 * 40). This is because the size is by default set to the size of the content. (box-sizing: content-box)</p>
+			<p>We can change this by setting the property box-sizing: border-box;. Now the size to the outside of the margins is 300px. </p>
 		</div>
+		<h2>Box-Sizing is Not Inheritable AKA Star Selector</h2>
+		<p>Some CSS properties cannot be inherited. So putting box-sizing: border-box in the body element does not make it applicable to all elements. We need to use * {} instead of a parent element. This says that every element uses this value.</p>
 	</div>
 
+	<h2>Cumulative Margins</h2>
+	<p>Left and right margins are cumulative, but top and bottom margins are not. They collapse so that the distance between is the larger of the two margins. So if an element is stacked on top of another, the distance between will be the greater of the two margins. Not the addition of the two.</p>
+	<p>You can see that the H1 and the box class are 40px apart, not 30px + 40 px = 70 px apart.</p>
+	<p>To reset browser defaults like padding and margins, you can do this in the start selector as well</p>
+
+	<h2>Scrolling</h2>
+	<p>If you set the height of the box as well as the width, you can have content spill over. To avoid this, you need to deal with overflow. Auto will put scroll bars in whichever direction they are needed. BUT we all hate double scroll bars. So, don't do it too much... may be acceptable in some situations.</p>
+
+	<h2>The Background Property</h2>
+	<p>Background images. If I give a general background property, it will overwrite any specific properties prior. </p>
+	<div id="bg">
+		Background properties are fun.
+	</div>
 </body>
 </html>

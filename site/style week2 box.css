@@ -1,0 +1,31 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+#box {
+	background-color: #80aaff;
+	padding: 10px 10px 10px 10px;
+	border: 2px solid black;
+	margin: 40px;
+	width: 400px;
+	height: 600px;
+	overflow: auto;
+	/* box-sizing: border-box; */
+}
+#content {
+	background-color: #ddffcc;
+}
+h1 {
+	margin-bottom: 30px;
+}
+/* Background Property */
+#bg {
+	margin: 20px;
+	width: 400px;
+	height: 300px;
+	background-color: #fc9;
+	background-image: url("maple leaf.jpg");
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: 200px 150px;
+}
