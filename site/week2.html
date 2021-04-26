@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		Week 2
+	</title>
+	<style>
+	h1 {
+		color: green;
+		font-size: 36px;
+		text-align: center;	
+	}
+
+	p {
+		color: blue;
+		font-size: 20px;
+		width: 200px;
+	}
+	article, div {
+		border: solid;
+		padding: 2px;
+	}
+	div {
+		border-color: green;
+	}
+	h3, .red {
+		color: red;
+	}
+	#idPurple {
+		color: purple;
+	}
+	p.red {
+		font-size: 15px;
+		font-weight: bold;
+	}
+	.slanted {
+		font-style: italic;
+	}
+	.red.slanted {
+		width: 400px;
+	}
+	article > p {
+		background-color: yellow;
+		opacity: .7;
+	}
+	article p {
+		text-align: center;
+	}
+
+	</style>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="index.html" title="Link to Week 1">Link to Week 1 Page
+				</a></li>
+				<li><a href="week2.html" title="Link to Week 2">Link to Week 2 Page
+				</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<h1>Week 2 - CSS</h1>
+
+	<h2 class="red">Sub Heading with red class</h2>
+	<p>This paragraph is not inside an article. It does not have the formatting assigned to paragraphs that are direct descendents of articles either.</p>
+	<p>It also does not get affected by the formatting for paraghraphs that are descendents of articles formatting (being centered).</p>
+
+	<article>
+		<h3>H3 has the same color as .red class</h3>
+		<p>CSS from the header section of the page. I need to make this long enough so that you can see it has a maximum width. A lot of sentences go in here. Check your grammar. Use stylesheets. This is pre stylesheet.</p>
+		<p>All paragraphs that are direct children of articles have a yellow background applied to them.</p>
+		<p>Each article has a black border to define it.</p>
+	</article>
+
+	<h2>Another Subheading</h2>
+
+
+	<article>
+	<h3>Another h3</h3>
+	<div>
+		<p class="red slanted">Yet another paragraph. This paragraph has the red class. <a href="index.html">Link back to main page</a> By combining the paragraph and class selectors, I was able to decrease the font size and weight for all paragraphs of class "red". This paragraph also has the slanted class, where it got its italics. Elements can have multiple classes by putting a space between the class names. The width of this paragraph was changed by targetting .red.slanted so that only elements with both classes would be affected.</p>
+		<p class="slanted">This paragraph has the slanted class, but not the red class.</p>
+		<p id="idPurple">This paragraph has an ID of idPurple. Only one element can have any given id value.</p>
+		<p>The paragraphs in this article are within a div class inside the article, so are not affected by the styling for paragraphs that are direct children of articles.</p>
+		<p>They are affected by the text centering done in the descendent selector which affects and paragraph inside an article.
+		<p>The div also has a border to define it. Its border is green.</p>
+	</div>	
+	</article>
+
+</body>
+</html>
