@@ -5,47 +5,105 @@
 	<title>
 		Week 2
 	</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<style>
+	/* Element Selector */
 	h1 {
 		color: green;
 		font-size: 36px;
 		text-align: center;	
 	}
-
+	/* Element Selector */
 	p {
 		color: blue;
 		font-size: 20px;
-		width: 200px;
+		width: 800px;
 	}
+	/* Multi element formatting */
 	article, div {
 		border: solid;
 		padding: 2px;
 	}
+	/* Element Selector */
 	div {
 		border-color: green;
 	}
+	span {
+		background-color: red;
+	}
+	/* Multi-element formatting */
 	h3, .red {
 		color: red;
 	}
+	/* ID selector */
 	#idPurple {
 		color: purple;
 	}
+	/* Element with class */
 	p.red {
 		font-size: 15px;
 		font-weight: bold;
 	}
+	/* Class Selector */ 
 	.slanted {
 		font-style: italic;
 	}
+	/* Multi-class Selector */
 	.red.slanted {
 		width: 400px;
 	}
+	/* Direct Child Selector */
 	article > p {
 		background-color: yellow;
 		opacity: .7;
 	}
+	/* Descendent Selector */
 	article p {
 		text-align: center;
+	}
+	/* Style List Items as a menu */
+	header li {
+		list-style: none;
+	}
+	a:link, a:visited {
+		text-decoration: none;
+		background-color: #eeeeee;
+		border: 1px solid black;
+		color: black;
+		display: block;
+		width: 200px;
+		text-align: center;
+		margin-bottom: 1px;
+	}
+	a:hover, a:active {
+		background-color: #666666;
+	}
+	/* n-th child */
+	header li:nth-child(2):hover {
+		font-size: 8px;
+	}
+	section div:nth-child(odd) {
+		background-color: #85e085; 
+	}
+	/* Specificity example */
+	div.specD p {
+		color: #ff0055;
+	}
+	p.specP {
+		color: #ffe6ee;
+	}
+	/* styling text */
+	.style {
+		font-family: Arial, Helvetica, sans-serif;
+		color: #008000;
+		font-style: italic;
+		font-weight: 700;
+		font-size: 32px;
+		text-transform: capitalize;
+		text-align: right;
+	}
+	#sizeT {
+		font-size: 120%;
 	}
 
 	</style>
@@ -53,42 +111,149 @@
 <body>
 	<header>
 		<nav>
-			<ul>
-				<li><a href="index.html" title="Link to Week 1">Link to Week 1 Page
-				</a></li>
-				<li><a href="week2.html" title="Link to Week 2">Link to Week 2 Page
-				</a></li>
-			</ul>
+	<ul>
+		<li><a href="index.html">Week 1</a></li>
+		<li><a href="week2.html">Week 2</a></li>
+		<li><a href="week2-box.html">Week 2 Box Model</a></li>
+		<li><a href="week3.html">Week 3</a></li>
+		<li><a href="week4.html">Week 4</a></li>
+		<li><a href="week5.html">Week 5</a></li>
+	</ul>
 		</nav>
 	</header>
 
 	<h1>Week 2 - CSS</h1>
 
-	<h2 class="red">Sub Heading with red class</h2>
+	<h2 class="red">Class Selector - H2 with red class</h2>
+	<p>The red class turns the text color red.</p>
 	<p>This paragraph is not inside an article. It does not have the formatting assigned to paragraphs that are direct descendents of articles either.</p>
-	<p>It also does not get affected by the formatting for paraghraphs that are descendents of articles formatting (being centered).</p>
 
+	<h2> Element selector - p</h2>
+	<p>Element p is formatted to have blue font, width of 800 px, and font size 20px.</p>
+	<p>It also does not get affected by the formatting for paragraphs that are descendents of articles formatting (being centered).</p>
+
+	<h2>Article with paras Inside</h2>
 	<article>
+		<h2>Multi element formatting</h2>
 		<h3>H3 has the same color as .red class</h3>
-		<p>CSS from the header section of the page. I need to make this long enough so that you can see it has a maximum width. A lot of sentences go in here. Check your grammar. Use stylesheets. This is pre stylesheet.</p>
+		<p>H3 and the class red are given the same formatting. Both will have red text. They can be defined together by separating with a comma.</p>
+
+		<h2>Direct Child Selector</h2>
 		<p>All paragraphs that are direct children of articles have a yellow background applied to them.</p>
 		<p>Each article has a black border to define it.</p>
 	</article>
 
-	<h2>Another Subheading</h2>
-
-
+	<h2>Article with a Div Inside</h2>
 	<article>
-	<h3>Another h3</h3>
+	<h3>H3 is formatted with red text</h3>
 	<div>
+		<h2>Element with Class</h2>
+		<p class="red">The element with class formatting applies only to elements of that type with the given class. The p.red formatting changes the font size to 15px and bolds the text. It is only applied to paragraphs of class red. Not other paragraphs, and not other elements of class red.</p>
+
+		<h2>Multi-class Selector</h2>
 		<p class="red slanted">Yet another paragraph. This paragraph has the red class. <a href="index.html">Link back to main page</a> By combining the paragraph and class selectors, I was able to decrease the font size and weight for all paragraphs of class "red". This paragraph also has the slanted class, where it got its italics. Elements can have multiple classes by putting a space between the class names. The width of this paragraph was changed by targetting .red.slanted so that only elements with both classes would be affected.</p>
+
+		<h2>Slanted Class</h2>
 		<p class="slanted">This paragraph has the slanted class, but not the red class.</p>
-		<p id="idPurple">This paragraph has an ID of idPurple. Only one element can have any given id value.</p>
+		
+		<h2>ID Selector - idPurple</h2>
+		<p id="idPurple">This paragraph has an ID of idPurple. Only one element can have any given id value. The id formatting turned the text purple.</p>
+
+		<h2>Descendent Selector</h2>
 		<p>The paragraphs in this article are within a div class inside the article, so are not affected by the styling for paragraphs that are direct children of articles.</p>
 		<p>They are affected by the text centering done in the descendent selector which affects and paragraph inside an article.
 		<p>The div also has a border to define it. Its border is green.</p>
 	</div>	
 	</article>
+
+	<h2>Pseudo-Class Selectors</h2>
+	<p>Links are formatted based on their state. The light grey box is for link and visited. The darker grey is for active and hover.</p>
+	<p>The list items in the header have also been formatted using a multi-selector format to remove the bullets.</p>
+	<ul>
+		<li><a href="index.html">Week 1</a></li>
+		<li><a href="week2.html">Week 2</a></li>
+		<li><a href="week3.html">Week 3</a></li>
+		<li><a href="week4.html">Week 4</a></li>
+		<li><a href="week5.html">Week 5</a></li>
+	</ul>
+
+	<h2>N-th Child Selector</h2>
+	<p>The nth-child in the header (week 2) has been formatted to have smaller text on hover by combining pseudoclass selectors.</p>
+	<p>The nth-child selector for div descendents of section which are ODD is to apply a light green background.</p>
+
+	<section>
+	<div>DIV 1</div>
+	<div>DIV 2</div>
+	<div>DIV 3</div>
+	<div>DIV 4</div>
+	<div>DIV 5</div>
+	<div>DIV 6</div>
+	<div>DIV 7</div>
+	<div>DIV 8</div>
+	<h2>Span Element</h2>
+	<span>Span Element</span>
+	<p>Notice that the span is not a block level element, so it's background only covers the words in the span.</p>
+	</section>
+
+	<h2>Style Placement</h2>
+	<p>We can place style elements in three different places:</p>
+		<ul>
+			<li>A separate style sheet</li>
+			<li>The header</li>
+			<li style="color: orange;">or directly inside an element</li>
+		</ul>
+	<p>The last list item was colored orange within the li tag. This style has no reusability. All styling up until now has been in the header. Styling on an external stylesheet is reusable for all pages that link to it.</p>
+	<p>The external stylesheet which was just added, gives a background color to the whole page. It will be linked to week 1 as well, to provide styling to that page. This allows us to have a consistent look across the whole website.</p>
+
+	<h2>Conflict Resolution in CSS</h2>
+	<p>What happens when there are competing style declarations for the same element.</p>
+	<ul>
+		<li>Origin Precedence</li>
+		<li>Merge</li>
+		<li>Inheritence</li>
+		<li>Specificity</li>
+	</ul>
+	
+	<h3>Origin Precedence</h3>
+	<p>The last declaration wins. (HTML is processed sequentially)/ The stylesheet is in the header. Styles lower than the external link will have precedence over the link.</p>
+	<p>The external style sheet says that the color for all paragraph elements should be black. But the internal style overrides the declaration for color.</p>
+	
+	<h3>Declarations Merge</h3>
+	<p>If an element has rules for different properties declared in different spots, they merge. IE the background colour can be declared in the style sheet and the text colour in the header, and both will be applied.</p>
+	<p>In this case the paragraph element in the style sheet also has font-style normal. This is not overridden because it is not declared anywhere else.</p>
+
+	<h3>Inheritence</h3>
+	<p>Children of an element will also get that property. The beige background specified for the body element is shown for all child elements of the body (except for those which override the background color).</p>
+	<p>The body element was given a font of Helvetica, meaning all elements have the font Helvetica, except for paragrphs which have the font specified as Cambria below the body font declaration.</p>
+
+	<h3>Specificity</h3>
+	<div class="specD">
+	<p class="specP">Most specific selector combination wins. Style element on an element is the most specific. ID is next, then class, then the number of elements used in the selector.</p>
+	<p>The above paragraph is affected by two combinations in the following order:</p>
+	<ul>
+		<li>div.specD p : color bright pink</li>
+		<li>p.specC : color pale pink</li>
+	</ul>
+	<p>Even though the pale pink is specified second, it is less specific, so it is not applied. Both specifications have one class (score 10) but the first has two elements, score 12, while the seond only has 1, score 11. Note: ID would be a score 100, and style in the para itself would be 1000. Number of elements is 1 (for one element). This para is only affected by the first as it does not have a class of "specP".</p>
+
+	<h3>Important</h3>
+	<p>!important overrides all other rules. Use only when absolutely necessary.</p>
+	</div>
+
+	<h2>Styling Text</h2>
+	<p class="style">This paragraph shows some of the text styling options. It includes fonts, colours, font-style, font-weight, font-size, text-transform and text-align.</p>
+	<h3>Relative Font Size</h3>
+	<article id="sizeT">
+	<div>Regular Text</div>
+	<p>Relative sizing doesn't override, it accumulates. Keep it consistent. Don't mix and match % em and px.</p>
+	<p>When the user zooms, if you use relative font-size, it will stay the same ratio, but px will not.</p>
+	<div style="font-size: 2em;">2em text is twice the regular font size
+		<div style="font-size: 2em">4em text is twice as large as 2em.
+			<div style="font-size: 0.5em">2em text again! by halving</div>
+		</div>
+	</div>
+	</article>
+
 
 </body>
 </html>
