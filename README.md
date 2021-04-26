@@ -2,7 +2,7 @@
 
 This repository has my code as I follow along in the lectures for the above-mentioned course. 
 
-### Current Status: Week 1
+### Current Status: Week 2
 
 ---
 
