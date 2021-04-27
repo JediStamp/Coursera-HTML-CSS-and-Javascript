@@ -1,0 +1,37 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	margin-bottom: 15px;
+	margin-left: 5px;
+}
+h2 {
+	margin: 5px;
+}
+.textP {
+	margin: 5px;
+}
+div#container {
+	background-color: #d9d9d9; /* grey */
+	position: relative;
+}
+div > p {
+	width: 50px;
+	height: 50px;
+	border: 1px solid black;
+	margin-bottom: 15px;
+}
+.p1 {
+	background-color: #fff2e6; /* pale orange */
+}
+.p2 {
+	background-color: #e6ffe6; /* pale gree */
+}
+.p3 {
+	background-color: #e6e6ff; /* pale purple */
+}
+.p4 {
+	background-color: #e6f7ff; /* pale blue */
+}

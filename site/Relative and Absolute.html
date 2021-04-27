@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Relative and Absolute</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="relative.css">
+</head>
+<body>
+	<header>
+		<nav>
+		<ul>
+			<li><a href="index.html">Week 1</a></li>
+			<li><a href="week2.html">Week 2</a>
+				<ul>
+				<li><a href="week2-box.html">Week 2 Box Model</a></li>
+				<li><a href="week2-float.html">Week 2 Floating</a></li>	
+				<li><a href="Relative and Absolute.html">Week 2 Rel & Abs</a></li>				
+				</ul></li>
+			<li><a href="week3.html">Week 3</a></li>
+			<li><a href="week4.html">Week 4</a></li>
+			<li><a href="week5.html">Week 5</a></li>
+		</ul>
+		</nav>
+	</header>
+<h1>Relative and Absolute Positioning</h1>
+
+<h2>Static Positioning</h2>
+<p class="textP">Default setting for everything but HTML. HTML has relative positioning. Offsets are ignored for static positioning.</p>
+
+	<div id="container">
+		<p class="p1"></p>
+		<p class="p2"></p>
+		<p class="p3"></p>
+		<p class="p4"></p>
+	</div>
+
+<h2>Relative Positioning</h2>
+<p class="textP">Element is positioned relative to its position in normal document flow. Offset is also relative to normal flow. Offset top / bottom / left/ and right. The original spot of the element is not lost in relative positioning.</p>
+<p class="textP">Positioning is relative to top bottom etc. So offset top: 50px would move it down from the top by 50px. You can also use negative values, which would move it up from the top.</p>
+<p class="textP">The first square (light orange) was moved down and to the right using top: 65px; and left: 65px;. As you can see its normal position has been maintained.</p>
+
+	<div id="container">
+		<p class="p1" style="position: relative; top: 65px; left: 65px;"></p>
+		<p class="p2"></p>
+		<p class="p3"></p>
+		<p class="p4"></p>
+	</div>
+
+<h2>Absolute Positioning</h2>
+<p class="textP">All offsets are relative to the nearest ancestor with positioning set (not to static). Absolute positioning takes the object out of the document flow.</p>
+<p class="textP">If a container is offset, everything within it is relative to it.</p>
+<p class="textP">The purple container is set to position absolute and give top and left offsets of 0. This will put the purple box at the very top of the page unless the div container is given position absolute or relative. Absolute positioning for the div elements is a mess, so we choose relative.</p>
+<p class="textP">We also gave the div container a top and left offset, and we can see that the entire container and its contents move together.</p>
+
+	<div id="container" style="top: 25px; left: 25px;">
+		<p class="p1" style="position: relative; top: 65px; left: 65px;"></p>
+		<p class="p2"></p>
+		<p class="p3" style="position: absolute; top: 0; left: 0;"></p>
+		<p class="p4"></p>
+	</div>
+</body>
+</html>
