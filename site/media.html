@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MediaQueries</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="media-style.css">
+    </head>
+<body>
+ <h1>Responsive Design</h1>
+
+<h2>Media Queries</h2>
+ <p class="textP"> When you are doing media queries, make sure you don't overlap the ranges, or it will try to apply both sets of styles at the overlapping part.</p>
+ <p class="p1 boxP"></p>   
+ <p class="p2 boxP"></p> 
+
+ <h2>Responsive Design</h2> 
+<p class="textP">Using percentages lets you keep the contents fitting the container. There is also content which will be more prevalent or less prevalent based on the version of the site you are using.</p>
+<p class="textP">12 column grid is the most common grid. This gives us a number of different options for displaying content. (Each element can take up as many columns of the layout as required).</p>
+<p class="textP">You can also nest grids.</p>
+<div class="row">
+    <div class="col-lg-3 col-md-6"><p>Item 1 class col-lg-3</p></div>
+    <div class="col-lg-3 col-md-6"><p>Item 2 and class col-md-6</p></div>
+    <div class="col-lg-3 col-md-6"><p>Item 3 col-lg-3 is 25%</p></div>
+    <div class="col-lg-3 col-md-6"><p>Item 4 col-md-6 is 50%</p></div>
+    <div class="col-lg-3 col-md-6"><p>Item 5 when device size gets smaller</p></div>
+    <div class="col-lg-3 col-md-6"><p>Item 6 none of the media queries will apply</p></div>
+    <div class="col-lg-3 col-md-6"><p>Item 7 so they will stack one on top of the other</p></div>
+    <div class="col-lg-3 col-md-6"><p>Item 8</p></div>
+</div>
+</body>
+
+
+</html>
