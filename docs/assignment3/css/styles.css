@@ -154,6 +154,36 @@ body{
 	color:  #c9edd7; /*lightest green*/
 	opacity: 0.8;
 }
+/*************** End of Home Page ****************/
+
+/************* Menu Categories Page **************/
+
+.category-tile {
+	position: relative;
+	border: 2px solid #f77a92; /* bright pink */
+	overflow: hidden;
+	width: 200px;
+	height: 200px;
+	margin: 0 auto 15px auto;
+}
+.category-tile span{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	background-color:  #484538; /* Black Olive */
+	color:  #c9edd7; /*lightest green*/
+	opacity: 0.8;
+}
+.category-tile:hover {
+	box-shadow: 0 1px 5px 1px #215f41; /* dark green */	
+}
+#menu-categories-title + div {
+	margin-bottom: 50px;
+}
 
 /****** Large Devices Only *******/
 
@@ -238,5 +268,25 @@ body{
 	.panel-footer section hr {
 		width: 50%;
 		border-color: #f77a92; /* bright pink */
+	}
+}
+
+/*** Extra Extra Small Devices Only ****/
+@media (max-width: 479px) {
+	.navbar-brand h1 {
+		padding-top: 5px;
+		font-size: 6vw;
+	}
+	#menu-tile, #specials-tile {
+		width: 280px;
+		margin: 0 auto 15px;
+	}
+	.col-xxs-12 {
+		position: relative;
+		min-height: 1px;
+		padding-right: 15px;
+		padding-left: 15px;
+		float: left;
+		width: 100%;
 	}
 }
