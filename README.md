@@ -3,17 +3,24 @@
 This repository has my code as I follow along in the lectures for the above-mentioned course. 
 
 https://jedistamp.github.io/Coursera-HTML-CSS-and-Javascript/ 
+
 This has the main items as learned throughout the first two weeks
 
 https://jedistamp.github.io/Coursera-HTML-CSS-and-Javascript/assignment2/
+
 Week two assignment - three responsive sections.
 
+https://jedistamp.github.io/Coursera-HTML-CSS-and-Javascript/week3/
+
+Week 3 worked through example (my version of the restuarant page)
+
 https://jedistamp.github.io/Coursera-HTML-CSS-and-Javascript/assignment3/
+
 Week 3 assignment IN PROGRESS
 
 ### Current Status: Week 3
 
----
+Starting assignment
 
 ## Welcome to GitHub Pages
 
