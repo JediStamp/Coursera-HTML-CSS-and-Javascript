@@ -77,6 +77,9 @@ body{
 	#collapsable-nav #nav-list li{
 		display: none !important;
 	}
+	.navbar-toggle {
+		display: none !important;
+	}
 }
 
 /*** Extra Small Devices Only ****/
