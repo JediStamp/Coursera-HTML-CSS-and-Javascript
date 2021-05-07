@@ -75,7 +75,7 @@ body{
 /*** Not Extra Small Device ***/
 @media (min-width: 768px) {
 	#collapsable-nav #nav-list li{
-		display: none;
+		display: none !important;
 	}
 }
 
