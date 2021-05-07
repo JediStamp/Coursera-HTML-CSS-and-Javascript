@@ -1,0 +1,96 @@
+/* Global Styles */
+body{
+	font-size: 16px;
+	color: #404040; /*dark grey*/
+	background-color: #f2f5e9; /*off-white*/
+	font-family: 'Georgia', serif;
+}
+
+/* Header Elements */
+
+#header-nav {
+	background-color: #c9edd7; /*lightest green*/
+	border-radius: 0;
+	border: 0;
+	/* margin-bottom: 0; */
+}
+
+.navbar-brand {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.navbar-brand h1 {
+	font-family: sans-serif;
+	color: #f77a92; /* bright pink */
+	font-size: 1.5em;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #484538; /* Black Olive */
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: .75;
+}
+.navbar-brand a:hover, .navbar-brand a:focus {
+	text-decoration: none;
+}
+#nav-list {
+	margin-top: 10px;
+}
+#nav-list a {
+	color: #484538; /* Black Olive */
+	text-align: center;
+}
+#nav-list a:hover {
+	background-color: #fce6e8; /* Light Pink */
+}
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+	border: 1px solid #f77a92; /* bright pink */
+}
+.navbar-header button.navbar-toggle {
+	clear: both;
+	margin-top: -30px; /* to make navbar smaller */
+}
+#collapsable-nav {
+	margin-bottom: -15px;
+}
+#collapsable-nav li {
+	background-color:#a7e1c5; /*medium green*/
+	border: 1px solid #215f41; /* dark green */
+}
+
+/***************** End of Header *****************/
+
+/******************* Home Page *******************/
+
+.container .tall-section {
+	border: 2px solid  #484538; /* Black Olive */
+	border-radius: 0;
+	min-height: 1000px;
+	background-color:  #c9edd7; /*lightest green*/
+	color: #2E6171; /* Blue Sapphire */
+	margin-bottom: 25px;
+}
+
+/*************** End of Home Page ****************/
+
+/*** Extra Small Devices Only ****/
+
+@media (max-width: 767px) {
+	.navbar-brand {
+		padding-top: 10px;
+		height: 75px;
+	}
+	.navbar-brand h1 {
+		padding-top: 10px;
+		font-size: 5vw; /* Responsive width */
+	}
+	.navbar-brand p {
+		color: #484538; /* Black Olive */
+		/*text-transform: uppercase;*/
+		font-size: 0.7em;
+		margin-top: 12px;
+	}
+	#collapsable-nav a {
+		font-size: 1.2em;
+	}
+}
