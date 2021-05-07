@@ -72,6 +72,12 @@ body{
 }
 
 /*************** End of Home Page ****************/
+/*** Not Extra Small Device ***/
+@media (min-width: 768px) {
+	#collapsable-nav #nav-list li{
+		display: none;
+	}
+}
 
 /*** Extra Small Devices Only ****/
 
@@ -83,12 +89,6 @@ body{
 	.navbar-brand h1 {
 		padding-top: 10px;
 		font-size: 5vw; /* Responsive width */
-	}
-	.navbar-brand p {
-		color: #484538; /* Black Olive */
-		/*text-transform: uppercase;*/
-		font-size: 0.7em;
-		margin-top: 12px;
 	}
 	#collapsable-nav a {
 		font-size: 1.2em;
