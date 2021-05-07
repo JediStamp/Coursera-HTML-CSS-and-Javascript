@@ -16,11 +16,11 @@ Week 3 worked through example (my version of the restuarant page)
 
 https://jedistamp.github.io/Coursera-HTML-CSS-and-Javascript/assignment3/
 
-Week 3 assignment IN PROGRESS
+Week 3 assignment complete.
 
 ### Current Status: Week 3
 
-Starting assignment
+complete
 
 ## Welcome to GitHub Pages
 
