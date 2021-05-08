@@ -18,9 +18,9 @@ https://jedistamp.github.io/Coursera-HTML-CSS-and-Javascript/assignment3/
 
 Week 3 assignment complete.
 
-### Current Status: Week 3
+### Current Status: Week 4
 
-complete
+lesson 43 - start
 
 ## Welcome to GitHub Pages
 
