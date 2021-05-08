@@ -20,7 +20,7 @@ Week 3 assignment complete.
 
 ### Current Status: Week 4
 
-lesson 43 - start
+lesson 45 - start
 
 ## Welcome to GitHub Pages
 
