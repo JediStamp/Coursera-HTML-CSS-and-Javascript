@@ -132,3 +132,86 @@ var x = 10;
 if ( (null) || (console.log("Hello")) || x > 5 ) {
   console.log("Hello");
 }
+
+// Lesson 45
+// Objects name / value pairs
+var company = new Object();
+company.name = "Coursera";
+console.log(company);
+company.ceo = new Object();
+company.ceo.firstName = "Jan";
+company.ceo.faveColor = "green";
+console.log(company);
+// dot notation can't be used if the property name has spaces
+console.log("Company CEO's fave color is: " + company.ceo.faveColor);
+// bracket notation can be used if there are spaces in property name
+console.log(company["name"]);
+
+var varProperty = "lastName";
+company.ceo[varProperty] = "smith";
+console.log(company.ceo.firstName + " " + company.ceo.lastName);
+ 
+ // Creating Objects using Literal Syntax
+ var Algonquin = {
+ 	name: "Algonquin College",
+ 	campus: {
+ 		main: "Ottawa",
+ 		satellite: "Perth",
+ 		online: "ACOnline"
+ 	},
+ 	level: "college",
+ 	$tuition: "$$$",
+ 	"property with spaces": "valid"
+ };
+
+ console.log(Algonquin);
+ console.log(Algonquin.campus.online);
+
+ // Lesson 46
+ // functions are first-class data types 
+ // you can do the same thin as you can with regular objects
+ // functions are objects
+ function multiply(x, y) {
+ 	return x * y;
+ }
+
+ console.log(multiply(5,3));
+ multiply.version = "v.1.0.0";
+ console.log(multiply);
+ console.log(multiply.toString()); //avail on all functions
+console.log(multiply.version);
+
+// Function Factory
+function makeMultiplier(multiplier) {
+	var myFunc = function (x) {
+		return multiplier * x;
+	};
+	return myFunc;
+}
+var multiplyBy3 = makeMultiplier(3);
+console.log(multiplyBy3(10));
+
+var doubleAll = makeMultiplier(2);
+console.log(doubleAll(100));
+
+// Passing Functions as Arguments
+function doOperationOn(x, operation) {
+	return operation(x);
+}
+
+var result = doOperationOn(5, multiplyBy3);
+console.log(result);
+
+result = doOperationOn(100, doubleAll);
+console.log(result);
+
+function makeMultiplier(multiplier) {
+  var myFunFunc = function (x) {
+    return multiplier * x;
+  };
+  
+  return myFunFunc;
+}
+
+var operation = makeMultiplier(10);
+console.log(operation(10));
