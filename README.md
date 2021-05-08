@@ -18,6 +18,10 @@ https://jedistamp.github.io/Coursera-HTML-CSS-and-Javascript/assignment3/
 
 Week 3 assignment complete.
 
+https://jedistamp.github.io/Coursera-HTML-CSS-and-Javascript/week4/
+
+Week 4 code is in javascript but needs to be viewed uding chrome developper tools and selectiong console. It does not manipulate the web page.
+
 ### Current Status: Week 4
 
 lesson 45 - start
