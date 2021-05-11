@@ -2,31 +2,57 @@
 
 This repository has my code as I follow along in the lectures for the above-mentioned course. 
 
+Original course notes at:
+
+https://github.com/jhu-ep-coursera/fullstack-course4
+
+---
+
+### Week 1 & 2
+
+This has the main items as learned throughout the first two weeks: 
+
 https://jedistamp.github.io/Coursera-HTML-CSS-and-Javascript/ 
 
-This has the main items as learned throughout the first two weeks
+Week two assignment - three responsive sections:
 
 https://jedistamp.github.io/Coursera-HTML-CSS-and-Javascript/assignment2/
 
-Week two assignment - three responsive sections.
+---
+
+### Week 3
+
+Week 3 worked through example (my version of the restuarant page):
 
 https://jedistamp.github.io/Coursera-HTML-CSS-and-Javascript/week3/
 
-Week 3 worked through example (my version of the restuarant page)
+Week 3 assignment:
 
 https://jedistamp.github.io/Coursera-HTML-CSS-and-Javascript/assignment3/
 
-Week 3 assignment complete.
+---
+
+### Week 4 
+
+Week 4 code is in javascript but needs to be viewed uding chrome developper tools and selectiong console. It does not manipulate the web page:
 
 https://jedistamp.github.io/Coursera-HTML-CSS-and-Javascript/week4/
 
-Week 4 code is in javascript but needs to be viewed uding chrome developper tools and selectiong console. It does not manipulate the web page.
+week 4 assignment viewed in console):
+
+https://jedistamp.github.io/Coursera-HTML-CSS-and-Javascript/assignment4/
+
+---
 
 ### Current Status: Week 4
 
-lesson 45 - start
+complete
 
-## Welcome to GitHub Pages
+---
+
+## Github Markdown Notes
+
+### Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/JediStamp/coursera-test/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
