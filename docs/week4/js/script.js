@@ -215,3 +215,218 @@ function makeMultiplier(multiplier) {
 
 var operation = makeMultiplier(10);
 console.log(operation(10));
+
+// Lesson 47
+
+// copying /passing by value 
+// if you change the value after the passing, 
+// the copied one does not change
+
+// copying by reference 
+// they both point to the same
+// point.
+
+// Objects are passed by reference. 
+// Primitives are passed by value.
+
+// Passing by value
+console.log("Passing by value");
+var a = 7;
+var b = a;
+console.log("a is: " + a + " b is: " + b);
+b = 5;
+console.log("after update");
+console.log("a is: " + a + " b is: " + b);
+
+// Passing by reference
+console.log("Passing by reference");
+var c = {x: 7};
+var d= c;
+console.log("c is: " + c.x + " d is: " + d.x);
+d.x = 5;
+console.log("after update");
+console.log("c is: " + c.x + " d is: " + d.x);
+
+function changePrimitive(primValue){
+	console.log("in changePrimitive...");
+	console.log("before:");
+	console.log(primValue);
+
+	primValue = 5;
+	console.log("after:");
+	console.log(primValue);
+}
+
+var value = 7;
+changePrimitive(value);
+console.log("after changePrimitive, orig value: ");
+console.log(value);
+
+function changeObject(objValue){
+	console.log("in changeObject...");
+	console.log("before:");
+	console.log(objValue);
+
+	objValue.x = 5;
+	console.log("after:");
+	console.log(objValue);
+}
+
+value = {x: 7};
+changeObject(value);
+console.log("after changeObject, orig value: ");
+console.log(value);
+
+// Lesson 48 - Creating objects
+function test() {
+	console.log("Hello World!");
+	console.log(this); // Pointing to the global window object
+	this.myName = "jenne";
+}
+test()
+console.log(window.myName); // Global window object
+
+// Function constructors usually capitalized
+function Circle (radius) {
+	console.log(this);
+	this.radius = radius;
+	//like in Java, constructors can't return anything
+	this.getArea = function () {
+		return Math.PI * Math.pow(this.radius, 2);
+	};
+}
+
+var myCircle = new Circle(10); // new Object();
+console.log(myCircle);
+console.log(myCircle.getArea());
+
+// Prototype is to make classes with functions
+// instead of recreating function in every object.
+
+function Circle2 (radius) {
+	this.radius = radius;
+}
+// Put this outside constructor so it isn't processed each time
+Circle2.prototype.getArea = function () {
+	return Math.PI * Math.pow(this.radius, 2);
+};
+
+var myCircle2 = new Circle2(10);
+console.log(myCircle2);
+
+var myCircle3 = new Circle2(20);
+console.log(myCircle3);
+
+// Lesson 49
+// Object Leterals and "this"
+var literalCircle = { // new Object()
+	radius: 10,
+	getArea: function () {
+		console.log(this);
+
+		var increaseRadius = function () {
+			this.radius = 20;
+		};
+		increaseRadius();
+		console.log(this.radius);
+		console.log(window); //window object radius is 20
+
+		var self = this; //to make a function within a function refer to this
+		var increaseRadius2 = function () {
+			self.radius = 20;
+		};
+		increaseRadius2();
+		console.log(this.radius); //this radius is 20
+
+		return Math.PI * Math.pow(this.radius, 2);
+	}
+};
+
+console.log(literalCircle.getArea());
+
+function Dog(name) {
+  this.name = name;
+}
+
+Dog.prototype.bark = function () {
+  console.log(this.name + " likes barking! Bark!");
+}
+
+var max = new Dog("Max", "Buddy");
+max.bark();
+
+// Lesson 50 - Arrays
+var array = new Array();
+array[0] = "jenne";
+array[1] = 2;
+array[2] = function(name) {
+	console.log("Hello " + name);
+};
+array[3] = {course: "HTML, CSS & JS"};
+
+console.log(array);
+console.log(array[0]);
+console.log(array[2]());
+console.log(array[2]("name"));
+console.log(array[2](array[0]));
+console.log(array[3].course);
+
+// short-hand array creation
+var names = ["Jenne", "Jedi", "Jennifer"];
+console.log(names);
+
+var names2 = [
+{name: "Jenne"}, //object with name Jenne
+"Jedi",
+"Jennifer"];
+console.log(names2);
+
+for (var i = 0; i < names.length; i++) {
+	console.log("Hello " + names[i]);
+}
+
+// sparse arrays
+names[10] = "Jim";
+
+for (var i = 0; i < names.length; i++) {
+	console.log("Hello " + names[i]);
+}
+
+var myObj = {
+	name: "Jenne",
+	course: "HTML/CSS/JS",
+	platform: "Coursera"
+};
+
+for (var prop in myObj){
+	console.log(prop + ":" + myObj[prop]);
+}
+
+for (var name in names) {
+	console.log("Hi " + names[name]);
+}
+
+names.greeting = "Hi!";
+
+for (var name in names) {
+	console.log("Hi " + names[name]);
+} // greeting is a property of the object, so it is included in the loop
+
+// Lesson 51 - Closures
+function makeMultiplier (multiplier) {
+	function b(){
+		console.log("Multiplier is: " + multiplier);
+	}
+	b();
+	return (
+		function (x) {
+			return multiplier * x;
+		}
+		);
+}
+
+var doubleAll = makeMultiplier(2);
+console.log(doubleAll(10));
+
+// Lesson 52 - Fake namespaces
+// see additional files
