@@ -38,7 +38,7 @@ Week 4 code is in javascript but needs to be viewed uding chrome developper tool
 
 https://jedistamp.github.io/Coursera-HTML-CSS-and-Javascript/week4/
 
-week 4 assignment viewed in console):
+week 4 assignment (viewed in console) :
 
 https://jedistamp.github.io/Coursera-HTML-CSS-and-Javascript/assignment4/
 
