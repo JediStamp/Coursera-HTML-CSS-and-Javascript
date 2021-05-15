@@ -25,4 +25,3 @@
 	window.byeSpeaker = byeSpeaker;
 
 })(window);
-
